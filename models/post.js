@@ -1,6 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
   var Player = sequelize.define("Player", {
-    ID: { type: Sequelize.INTEGER, autoIncrement: true },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -9,20 +8,12 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     level: {
-      type: Sequelize.INTEGER
+      type: DataTypes.INTEGER
     },
     xp: {
-      type: Sequelize.INTEGER
+      type: DataTypes.INTEGER
     }
   });
-
-  Player.associate = function(models) {
-    Player.belongsTo(models.Class, {
-      foreignKey: {
-        allowNull: false
-      }
-    });
-  };
 
   return Player;
 };
