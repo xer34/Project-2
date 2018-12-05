@@ -1,8 +1,160 @@
-body {
+body, html {
     margin: 0;
     padding: 0;
+    background: #003333;
 }
 
-.classesDiv {
-    background: red;
+div.content h3 {
+    color: white;
+}
+
+div.content {
+    color: white;
+}
+
+.container {
+    position: relative;
+    width: 1100px;
+    height: 650px;
+    margin: 30px auto;
+    left: 10%;
+}
+
+.container .box {
+    position: relative;
+    width: calc(400px - 30px);
+    height: calc(300px - 30px);
+    float: left;
+    margin: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.container .box .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(190, 30, 30);
+    transition: 0.6s;
+    z-index: 1;
+}
+
+.container .box:hover .icon {
+    top: 20px;
+    left: calc(50% - 40px);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.container .box .icon .fas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 120px;
+    transition: 0.6s;
+    color: #fff;
+}
+
+.container .box:hover .icon .fas {
+    font-size: 55px;
+}
+
+.container .box .content {
+    position: absolute;
+    top: 100%;
+    height: calc(100%, -100%);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: 0.6s;
+    opacity: 0;
+}
+
+.container .box:hover .content {
+    top: 100px;
+    opacity: 1;
+}
+
+.container .box .cleric  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: green;
+    transition: 0.6s;
+    z-index: 1;
+}
+
+.container .box .wizard  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: darkcyan;
+    transition: 0.6s;
+    z-index: 1;
+}
+
+.container .box .banker  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: darkmagenta;
+    transition: 0.6s;
+    z-index: 1;
+}
+
+.container .warriorbox {
+    background: darkred;
+}
+
+.container .clericbox {
+    background: rgb(34, 95, 34);
+}
+
+.container .wizardbox {
+    background: rgb(12, 119, 119);
+}
+
+.container .bankerbox {
+    background: rgb(117, 6, 117);
+}
+
+#classesDiv {
+    margin: 0 auto;
+    padding: 0 auto;
+    background: #003333;
+}
+
+#classesText {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin-top: 20px;
+    color: white;
+    background: #003333;
+}
+
+.page-footer {
+    background: #669999;
+}
+
+nav#navbar.navbar-light.bg-light {
+    background: #669999;
+    width: 100%;
+}
+
+.footer-copyright {
+    width: 100%;
 }
