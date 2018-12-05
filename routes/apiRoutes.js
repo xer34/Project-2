@@ -2,22 +2,35 @@ var db = require("../models");
 
 module.exports = function(app) {
   // Get all examples
-  app.get("/api/examples", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
+  app.get("/api/players", function(req, res) {
+    db.Player.findAll({}).then(function(dbExamples) {
       res.json(dbExamples);
     });
   });
 
   // Create a new example
-  app.post("/api/examples", function(req, res) {
-    db.Example.create(req.body).then(function(dbExample) {
+  app.post("/api/players", function(req, res) {
+    db.Player.create(req.body).then(function(dbExample) {
       res.json(dbExample);
     });
   });
 
+  // POST route for saving a new post
+  app.post("/api/players/:id", function(req, res) {
+    console.log(req.body);
+    db.Players.update(
+      { title: req.body.Player },
+      { where: req.params.id }
+    ).then(function(dbPost) {
+      res.json(dbPost);
+    });
+  });
+
   // Delete an example by id
-  app.delete("/api/examples/:id", function(req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
+  app.delete("/api/players/:id", function(req, res) {
+    db.Player.destroy({ where: { id: req.params.id } }).then(function(
+      dbExample
+    ) {
       res.json(dbExample);
     });
   });
