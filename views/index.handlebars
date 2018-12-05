@@ -1,71 +1,126 @@
 <div id="home">
-  <div class="container">
-    <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk_RaMnrVr7PDH92sjcl4xMfAvxdgKHk7eV-JuLbDjgb4Y0NRO" width="30" height="30" class="d-inline-block align-top" alt="">  Day Challenge RPG
-        </a>
-        <button type="button" class="btn btn-success">Home</button>
-    </nav>
+	<div class="container">
+		<nav class="navbar navbar-light bg-light">
+			<a class="navbar-brand" href="#">
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk_RaMnrVr7PDH92sjcl4xMfAvxdgKHk7eV-JuLbDjgb4Y0NRO"
+				 width="30" height="30" class="d-inline-block align-top" alt=""> Day Challenge RPG
+			</a>
+			<button type="button" class="btn btn-success">Home</button>
+		</nav>
 
-    <!-- Login Section -->
-    <div class="limiter">
-		<div class="container-login100" style="background-image: url('images/img-01.jpg');">
-			<div class="wrap-login100 p-t-190 p-b-30">
-				<form class="login100-form validate-form">
-					<div class="login100-form-avatar">
-						<img src="images/avatar-01.jpg" alt="AVATAR">
-					</div>
+		
 
-					<span class="login100-form-title p-t-20 p-b-45">
-						John Doe
-					</span>
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
 
-					<div class="wrap-input100 validate-input m-b-10" data-validate = "Username is required">
-						<input class="input100" type="text" name="username" placeholder="Username">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<i class="fa fa-user"></i>
-						</span>
-					</div>
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Modal Heading</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
 
-					<div class="container-login100-form-btn p-t-10">
-						<button href="/classes" class="login100-form-btn">
-							Submit
-						</button>
-					</div>
+      <!-- Modal body -->
+      <div class="modal-body">
+        Modal body..
+      </div>
 
-					<div class="text-center w-full">
-						<a class="txt1" href="#">
-							About
-							<i class="fa fa-long-arrow-right"></i>						
-						</a>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
 
-    <!-- Footer -->
-    <footer class="page-footer font-small blue">
-          
-        <div class="footer-copyright text-center py-3">© 2018 Copyright:
-            <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
-        </div>
-            
-    </footer>
-    
+    </div>
   </div>
 </div>
 
-<!--===============================================================================================-->	
-	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+
+		<!-- Login Section -->
+		<div class="limiter">
+			<div class="container-login100">
+				<div class="wrap-login100 p-t-190 p-b-30">
+					<form class="login100-form validate-form">
+						<!-- Image Profile -->
+						<div class="login100-form-avatar">
+							<img src="images/avatar-01.png" alt="AVATAR" type="button" data-toggle="modal" data-target="#myModal">
+						</div>
+
+						<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Modal Heading</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        Modal body..
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+						<span class="login100-form-title p-t-20 p-b-45">
+							John Doe
+						</span>
+
+						<div class="wrap-input100 validate-input m-b-10" data-validate="Username is required">
+							<input class="input100" type="text" name="username" placeholder="Username">
+							<span class="focus-input100"></span>
+							<span class="symbol-input100">
+								<i class="fa fa-user"></i>
+							</span>
+						</div>
+
+						<div class="container-login100-form-btn p-t-10">
+							<button href="/classes" class="login100-form-btn">
+								Submit
+							</button>
+						</div>
+
+						<div class="text-center w-full">
+							<a class="txt1" href="#">
+								About
+								<i class="fa fa-long-arrow-right"></i>
+							</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="page-footer font-small blue">
+
+			<div class="footer-copyright text-center py-3">© 2018 Copyright:
+				<a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+			</div>
+
+		</footer>
+
+	</div>
+</div>
+
 <!--===============================================================================================-->
-	<script src="vendor/bootstrap/js/popper.js"></script>
-<!--===============================================================================================-->  
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
-	<script src="vendor/select2/select2.min.js"></script>
+<script src="vendor/bootstrap/js/popper.js"></script>
 <!--===============================================================================================-->
-	
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
