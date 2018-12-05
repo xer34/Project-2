@@ -1,8 +1,24 @@
+var playerName = $("#playerName");
+
+$("#playerNameSubmit").on("click", insertPlayerName);
+console.log(this + "clicked");
+
+function insertPlayerName(event) {
+  event.preventDefault();
+  var player = {
+    name: playerName.val().trim()
+  };
+
+  $.post("/api/players", player, refreshExamples);
+  console.log(player);
+  $newItemInput.val("");
+}
+
 // Get references to page elements
-var $exampleText = $("#example-text");
-var $exampleDescription = $("#example-description");
-var $submitBtn = $("#submit");
-var $exampleList = $("#example-list");
+// var $exampleText = $("#example-text");
+// var $exampleDescription = $("#example-description");
+// var $submitBtn = $("#submit");
+// var $exampleList = $("#example-list");
 
 // The API object contains methods for each kind of request we'll make
 var API = {

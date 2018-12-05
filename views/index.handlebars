@@ -8,10 +8,32 @@
 			<button type="button" class="btn btn-success">Home</button>
 		</nav>
 
-		
+		<!-- The Modal -->
+						<div class="modal" id="myModal">
+							<div class="modal-dialog">
+								<div class="modal-content">
+
+									<!-- Modal Header -->
+									<div class="modal-header">
+										<h4 class="modal-title"></h4>
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+									</div>
+
+									<!-- Modal body -->
+									<div class="modal-body">
+										Modal body..
+									</div>
+
+									<!-- Modal footer -->
+									<div class="modal-footer">
+										<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+									</div>
+
+								</div>
+							</div>
+						</div>
 
 		<!-- Login Section -->
-		<div class="limiter">
 			<div class="container-login100">
 				<div class="wrap-login100 p-t-190 p-b-30">
 					<form class="login100-form validate-form">
@@ -20,37 +42,13 @@
 							<img src="images/avatar-01.png" alt="AVATAR" type="button" data-toggle="modal" data-target="#myModal">
 						</div>
 
-						<!-- The Modal -->
-<div class="modal" id="myModal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-
-      <!-- Modal Header -->
-      <div class="modal-header">
-        <h4 class="modal-title">Modal Heading</h4>
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
-
-      <!-- Modal body -->
-      <div class="modal-body">
-        Modal body..
-      </div>
-
-      <!-- Modal footer -->
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-      </div>
-
-    </div>
-  </div>
-</div>
-
+						
 						<span class="login100-form-title p-t-20 p-b-45">
 							John Doe
 						</span>
 
 						<div class="wrap-input100 validate-input m-b-10" data-validate="Username is required">
-							<input class="input100" type="text" name="username" placeholder="Username">
+							<input class="input100" type="text" name="username" placeholder="Username" id='playerName'>
 							<span class="focus-input100"></span>
 							<span class="symbol-input100">
 								<i class="fa fa-user"></i>
@@ -58,7 +56,7 @@
 						</div>
 
 						<div class="container-login100-form-btn p-t-10">
-							<button href="/classes" class="login100-form-btn">
+							<button href="/classes" class="login100-form-btn" id="playerNameSubmit">
 								Submit
 							</button>
 						</div>
@@ -72,7 +70,6 @@
 					</form>
 				</div>
 			</div>
-		</div>
 
 		<!-- Footer -->
 		<footer class="page-footer font-small blue">
@@ -86,7 +83,9 @@
 	</div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+ crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
