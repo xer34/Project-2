@@ -1,0 +1,52 @@
+<head>
+    <meta charset="utf-8">
+    <title>Game</title>
+  </head>
+  
+  <body>
+    <button data-user="push ups">The Warrior</button>
+    <button data-user="cleric">The Cleric</button>
+    <button data-user="wizard">The Wizard</button>
+    <button data-user="banker">The Banker</button>
+    <div id="gifs-appear-here">
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      
+      $("button").on("click", function() {
+        
+        var user = $(this).attr("data-user");
+  
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
+        user + "&api_key=A9a984vsB3qOfVNOYu0h2chY6Fgll2gR&limit=1";
+        
+        $.ajax({
+          url: queryURL,
+          method: "GET"
+        })
+          .then(function(response) {
+            console.log(queryURL);
+            console.log(response);
+            
+            var results = response.data;
+            for (var i = 0; i < results.length; i++) {
+                var userDiv = $("<div>");
+                
+                var p = $("<p>");
+                
+                var userImage = $("<img>");
+                userImage.attr("src", results[i].images.fixed_height.url);
+  
+              userDiv.append(p);
+              userDiv.append(userImage);
+  
+              
+              $("#gifs-appear-here").prepend(userDiv);
+            }
+          });
+      });
+    </script>
+  </body>
+  
+  </html>
+  
