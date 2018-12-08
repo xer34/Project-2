@@ -65,6 +65,41 @@
 
 
 
+    <script type="text/javascript">
+
+        $("button").on("click", function () {
+
+            var user = $(this).attr("data-user");
+
+            var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
+                user + "&api_key=A9a984vsB3qOfVNOYu0h2chY6Fgll2gR&limit=1";
+
+            $.ajax({
+                url: queryURL,
+                method: "GET"
+            })
+                .then(function (response) {
+                    console.log(queryURL);
+                    console.log(response);
+
+                    var results = response.data;
+                    for (var i = 0; i < results.length; i++) {
+                        var userDiv = $("<div>");
+
+                        var p = $("<p>");
+
+                        var userImage = $("<img>");
+                        userImage.attr("src", results[i].images.fixed_height.url);
+
+                        userDiv.append(p);
+                        userDiv.append(userImage);
+
+
+                        $("#gifs-appear-here").prepend(userDiv);
+                    }
+                });
+        });
+    </script>
 
 
 
@@ -87,7 +122,7 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script type="text/javascript" src="loading-bar.js"></script>
-    <script src="javascript/app.js"></script>
+    {{!-- <script src="javascript/app.js"></script> --}}
 
 </body>
 
