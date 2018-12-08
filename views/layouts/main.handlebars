@@ -11,13 +11,27 @@
   <link rel="stylesheet" href="/styles/main.css" media="screen" title="no title" charset="utf-8">
 	  <link rel="stylesheet" href="/styles/classesStyles.css" media="screen" title="no title" charset="utf-8">
 <!--===============================================================================================-->
-
+ <script src="https://ok1static.oktacdn.com/assets/js/sdk/okta-signin-widget/2.6.0/js/okta-sign-in.min.js" type="text/javascript"></script>
+    <link href="https://ok1static.oktacdn.com/assets/js/sdk/okta-signin-widget/2.6.0/css/okta-sign-in.min.css" type="text/css" rel="stylesheet"/>
+<!--===============================================================================================-->
   <title>Home Page</title>
 </head>
 
 <body>
   {{{body}}}
 
+
+<script>
+  new OktaSignIn({
+  baseUrl: 'https://dev-563870.oktapreview.com',
+  clientId: '{clientId}',
+  redirectUri: window.location.origin,
+  authParams: {
+    issuer: 'default',
+    responseType: ['id_token','token']
+  }
+})
+</script>
 </body>
 
 </html>
