@@ -1,84 +1,89 @@
+<head>
+	<link rel="stylesheet" href="/styles/indexStyles.css" media="screen" title="no title" charset="utf-8">
+</head>
+
 <div id="home">
 	<div class="container">
-		<nav class="navbar navbar-light bg-light">
-			<a class="navbar-brand" href="#">
-				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk_RaMnrVr7PDH92sjcl4xMfAvxdgKHk7eV-JuLbDjgb4Y0NRO"
-				 width="30" height="30" class="d-inline-block align-top" alt=""> Day Challenge RPG
-			</a>
-			<button type="button" class="btn btn-success">Home</button>
-		</nav>
-
+	
 		<!-- The Modal -->
-						<div class="modal" id="myModal">
-							<div class="modal-dialog">
-								<div class="modal-content">
+		<div class="modal" id="myModal">
+			<div class="modal-dialog">
+				<div class="modal-content">
 
-									<!-- Modal Header -->
-									<div class="modal-header">
-										<h4 class="modal-title"></h4>
-										<button type="button" class="close" data-dismiss="modal">&times;</button>
-									</div>
+					<!-- Modal Header -->
+					<div class="modal-header">
+						<h4 class="modal-title"></h4>
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
 
-									<!-- Modal body -->
-									<div class="modal-body">
-										Modal body..
-									</div>
-
-									<!-- Modal footer -->
-									<div class="modal-footer">
-										<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-									</div>
-
-								</div>
-							</div>
-						</div>
-
-		<!-- Login Section -->
-			<div class="container-login100">
-				<div class="wrap-login100 p-t-190 p-b-30">
-					<form class="login100-form validate-form">
-						<!-- Image Profile -->
+					<!-- Modal body -->
+					<div class="modal-body">
 						<div class="login100-form-avatar">
-							<img src="images/avatar-01.png" alt="AVATAR" type="button" data-toggle="modal" data-target="#myModal">
+						<img src="images/kingIcon.jpg" class ="profilepic" alt="AVATAR" type="button" data-toggle="modal" data-target="#myModal" data-num="1">
 						</div>
-
-						
-						<span class="login100-form-title p-t-20 p-b-45">
-							John Doe
-						</span>
-
-						<div class="wrap-input100 validate-input m-b-10" data-validate="Username is required">
-							<input class="input100" type="text" name="username" placeholder="Username" id='playerName'>
-							<span class="focus-input100"></span>
-							<span class="symbol-input100">
-								<i class="fa fa-user"></i>
-							</span>
+						<div class="login100-form-avatar">
+						<img src="images/queenIcon.jpg" class ="profilepic" alt="AVATAR" type="button" data-toggle="modal" data-target="#myModal" data-num="2">
 						</div>
-
-						<div class="container-login100-form-btn p-t-10">
-							<button href="/classes" class="login100-form-btn" id="playerNameSubmit">
-								Submit
-							</button>
+						<div class="login100-form-avatar">
+						<img src="images/jesterIcon.jpg" class ="profilepic" alt="AVATAR" type="button" data-toggle="modal" data-target="#myModal" data-num="3">
 						</div>
-
-						<div class="text-center w-full">
-							<a class="txt1" href="#">
-								About
-								<i class="fa fa-long-arrow-right"></i>
-							</a>
+						<div class="login100-form-avatar">
+						<img src="images/knightIcon.jpg" class ="profilepic" alt="AVATAR" type="button" data-toggle="modal" data-target="#myModal" data-num="4">
 						</div>
-					</form>
+						<div class="login100-form-avatar">
+						<img src="images/priestIcon.jpg" class ="profilepic" alt="AVATAR" type="button" data-toggle="modal" data-target="#myModal" data-num="5">
+						</div>
+						<div class="login100-form-avatar">
+						<img src="images/wizardIcon.jpg" class ="profilepic" alt="AVATAR" type="button" data-toggle="modal" data-target="#myModal" data-num="6">
+						</div>
+					</div>
+
+					<!-- Modal footer -->
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+					</div>
+
 				</div>
 			</div>
+		</div>
 
-		<!-- Footer -->
-		<footer class="page-footer font-small blue">
+		<!-- Login Section -->
+		<div class="container-login100">
+			<div class="wrap-login100 p-t-190 p-b-30">
+				<form class="login100-form validate-form">
+					<!-- Image Profile -->
+					<div class="login100-form-avatar">
+						<img src="images/avatar-01.png" id="mainimage" alt="AVATAR" type="button" data-toggle="modal" data-target="#myModal">
+					</div>
 
-			<div class="footer-copyright text-center py-3">© 2018 Copyright:
-				<a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+
+					<span class="login100-form-title p-t-20 p-b-45" id="name">
+						
+					</span>
+
+					<div class="wrap-input100 validate-input m-b-10" data-validate="Username is required">
+						<input class="input100" type="text" name="username" placeholder="Username" id='playerName'>
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-user"></i>
+						</span>
+					</div>
+
+					<div class="container-login100-form-btn p-t-10">
+						<button href="/classes" class="login100-form-btn" id="playerNameSubmit">
+							Submit
+						</button>
+					</div>
+
+					<div class="text-center w-full">
+						<a class="txt1" href="#">
+							Challenge yourself everyday to be better!
+							<i class="fa fa-long-arrow-right"></i>
+						</a>
+					</div>
+				</form>
 			</div>
-
-		</footer>
+		</div>
 
 	</div>
 </div>
@@ -86,8 +91,30 @@
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
  crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+ crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+ crossorigin="anonymous"></script>
 
+{{!-- <script src="/js/index.js"></script> --}}
 
-<script src="/js/index.js"></script>
+<script>
+$(document).ready(function(){
+
+	//Login Image
+	$(".profilepic").click(function(){
+		var src = $(this).attr("src")
+
+	$("#mainimage").attr("src",src)
+		console.log(src)
+	})
+
+	//Login name
+	$("#playerName").keyup(function(){
+		$("#name").text($(this).val())
+		
+	})
+
+})
+
+</script>
