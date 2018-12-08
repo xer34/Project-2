@@ -1,6 +1,8 @@
 require("dotenv").config();
 var express = require("express");
 var exphbs = require("express-handlebars");
+const passportSetup = require("./config/passport");
+const authRoutes = require("./routes/auth-routes");
 
 var db = require("./models");
 
@@ -12,6 +14,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("public"));
 
+
 // Handlebars
 app.engine(
   "handlebars",
@@ -22,8 +25,10 @@ app.engine(
 app.set("view engine", "handlebars");
 
 // Routes
+app.use("/auth", authRoutes);
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
+
 
 var syncOptions = { force: false };
 

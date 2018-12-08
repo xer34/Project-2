@@ -1,4 +1,5 @@
 var db = require("../models");
+const passport = require('passport');
 
 module.exports = function(app) {
   // Get all examples
@@ -34,4 +35,6 @@ module.exports = function(app) {
       res.json(dbExample);
     });
   });
+
 };
+
