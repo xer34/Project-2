@@ -20,6 +20,7 @@ module.exports = function(app) {
   app.post("/api/players/:id", function(req, res) {
     db.Player.update(
       {name: req.body.Player },
+      {class: req.body.Player},
       {where: {googleId: profile.id}}
     ).then(function(dbPost) {
       res.json(dbPost);

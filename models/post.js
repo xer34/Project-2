@@ -10,6 +10,9 @@ module.exports = function(sequelize, DataTypes) {
     name: {
       type: DataTypes.STRING
     },
+    class: {
+      type: DataTypes.STRING
+    },
     level: {
       type: DataTypes.INTEGER
     },
