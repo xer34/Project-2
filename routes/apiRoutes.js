@@ -9,6 +9,12 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/api/warriors", function(req, res) {
+    db.Player.findAll({}).then(function(warriors) {
+      res.json(warriors);
+    });
+  });
+
   // Create a new example
   app.post("/api/players", function(req, res) {
     db.Player.create(req.body).then(function(players) {
@@ -16,12 +22,12 @@ module.exports = function(app) {
     });
   });
 
+
   // POST route for saving a new post
-  app.post("/api/players/:id", function(req, res) {
+  app.post("/api/:id/warriors", function(req, res) {
     db.Player.update(
-      {name: req.body.Player },
-      {class: req.body.Player},
-      {where: {googleId: profile.id}}
+      {class: "Warrior"},
+      {where: { googleId: req.params.id }}
     ).then(function(dbPost) {
       res.json(dbPost);
     });
