@@ -1,0 +1,103 @@
+body {
+    color: white;
+    font-family: Chakra Petch;
+    background: url("castlelandscape.png") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+p {
+    font-size: 20px;
+}
+
+hr {
+    border: 0;
+    height: 3px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.bigclass {
+    font-size: 150px;
+}
+
+#questTxt {
+    font-size: 45px;
+}
+
+#nextLevelTxt {
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+#questCompleteBtn {
+    border: none;
+    color: white;
+    padding: 5px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 10px 9px;
+    -webkit-transition-duration: 0.5s; /* Safari */
+    transition-duration: 0.5s;
+    cursor: pointer;
+    background-color: white;
+    color: black; 
+    border: 2px solid #008CBA;
+    border-radius: 10px;
+    height: 50px;
+    font-family: Chakra Petch;
+}
+
+#questCompleteBtn:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+#lvlTxt {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#completedTxt {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    border: none;
+    background: #3186A5;
+    color: #ffffff !important;
+    font-weight: 100;
+    text-transform: uppercase;
+    border-radius: 6px;
+    display: inline-block;
+    height: 20%;
+    width: 40%;
+    font-size: 25px;
+    font-family: Chakra Petch;
+}
+
+.btn:hover {
+    color: ivory !important;
+    font-weight: 700 !important;
+    letter-spacing: 10px;
+    background: none;
+    -webkit-box-shadow: 0px 5px 40px -10px rgb(0, 0, 0);
+    -moz-box-shadow: 0px 5px 40px -10px rgb(0, 0, 0);
+    transition: all 0.3s ease 0s;
+}
