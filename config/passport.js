@@ -3,14 +3,14 @@ const GoogleStrategy = require("passport-google-oauth").OAuth2Strategy;
 const keys = require("./keys");
 const db = require("../models");
 
-passport.serializeUser((googleId, done) => {
-  // done(null, Player.googleId);\
-  db.Player.findOne(googleId).then(user => done(null, Player));
-});
+// passport.serializeUser((Player, done) => {
+//   done(null, Player.googleId);
 
-passport.deserializeUser((googleId, done) => {
-  db.Player.findOne(googleId).then(user => done(null, Player));
-});
+// });
+
+// passport.deserializeUser((googleId, done) => {
+//   db.Player.findOne(googleId).then(user => done(null, Player));
+// });
 
 passport.use(
   new GoogleStrategy(
@@ -50,7 +50,7 @@ passport.use(
       //   }
       })
                   .then(Player => {
-            //   console.log("new user created: " + newUser);
+              console.log("new user created: " + newUser);
               done(null, Player);
             });
     }
