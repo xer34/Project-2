@@ -36,6 +36,7 @@ module.exports = function(app) {
   app.get("/quests", function(req, res) {
     res.render("quests");
   });
+  
 
   app.get("*", function(req, res) {
     res.render("404");

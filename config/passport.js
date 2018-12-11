@@ -3,14 +3,14 @@ const GoogleStrategy = require("passport-google-oauth").OAuth2Strategy;
 const keys = require("./keys");
 const db = require("../models");
 
-// passport.serializeUser((Player, done) => {
-//   done(null, Player.googleId);
+passport.serializeUser((Player, done) => {
+  done(null, Player.googleId);
 
-// });
+});
 
-// passport.deserializeUser((googleId, done) => {
-//   db.Player.findOne(googleId).then(user => done(null, Player));
-// });
+passport.deserializeUser((googleId, done) => {
+  db.Player.findOne(googleId).then(user => done(null, Player));
+});
 
 passport.use(
   new GoogleStrategy(
@@ -18,7 +18,8 @@ passport.use(
       // options for google strategy
       clientID: keys.google.clientID,
       clientSecret: keys.google.clientSecret,
-      callbackURL: "https://quiet-castle-43092.herokuapp.com/auth/google/redirect"
+      // callbackURL: "https://quiet-castle-43092.herokuapp.com/auth/google/redirect"
+      callbackURL: "/auth/google/redirect"
     },
     function(token, tokenSecret, profile, done) {
         db.Player.findOrCreate({
