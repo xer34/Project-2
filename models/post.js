@@ -19,7 +19,14 @@ module.exports = function(sequelize, DataTypes) {
     xp: {
       type: DataTypes.INTEGER
     }
+
+    
   });
 
+
+
   return Player;
+
 };
+
+

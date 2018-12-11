@@ -12,7 +12,7 @@ router.get(
 router.get('/google/redirect', 
   passport.authenticate('google', {
       successRedirect: '/classes',
-      failureRedirect: '/classes'
+      failureRedirect: '/404'
   }))
 
   // router.get('/google/redirect', 
