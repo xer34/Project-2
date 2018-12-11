@@ -1,0 +1,47 @@
+body {
+    background: #003333;
+    color: white;
+    font-family: Chakra Petch;
+}
+
+button {
+    border: none;
+    color: white;
+    padding: 5px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 10px 9px;
+    -webkit-transition-duration: 0.5s; /* Safari */
+    transition-duration: 0.5s;
+    cursor: pointer;
+    background-color: white;
+    color: black; 
+    border: 2px solid #008CBA;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+h1 {
+    font-size: 35px;
+}
+
+h2 {
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+hr {
+    border: 0;
+    height: 3px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.buttontxt {
+    margin-top: 10px;
+}
