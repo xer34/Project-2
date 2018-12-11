@@ -4,9 +4,9 @@ const exphbs = require("express-handlebars");
 const passportSetup = require("./config/passport");
 const authRoutes = require("./routes/auth-routes");
 const passport = require("passport");
-
+const cookieSession = require("cookie-session")
+const keys = require("./config/keys.js");
 const db = require("./models");
-
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -15,7 +15,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("public"));
 app.use(passport.initialize());
+app.use(passport.session())
 
+app.use(cookieSession({
+  maxAge: 24 * 60 * 60 * 1000,
+  keys: [keys.session.cookieKey]
+}))
 
 // Handlebars
 app.engine(

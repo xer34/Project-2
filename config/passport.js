@@ -7,6 +7,10 @@ passport.serializeUser((Player, done) => {
   done(null, Player.googleId);
 });
 
+passport.deserializeUser((googleId, done) => {
+  db.Player.findOne(googleId).then(user => done(null, Player));
+});
+
 passport.use(
   new GoogleStrategy(
     {
@@ -26,7 +30,7 @@ passport.use(
       db.Player.findOne({ googleId: profile.id }).then(currentUser => {
         if (currentUser) {
           // already have this user
-          console.log("current user is: ", currentUser);
+        //   console.log("current user is: ", currentUser);
           done(null, currentUser);
           // do something
         } else {
@@ -39,7 +43,7 @@ passport.use(
           })
             .save()
             .then(newUser => {
-              console.log("new user created: " + newUser);
+            //   console.log("new user created: " + newUser);
               done(null, newUser);
             });
         }
