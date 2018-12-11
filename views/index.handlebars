@@ -12,36 +12,42 @@
 
 					<!-- Modal Header -->
 					<div class="modal-header">
-						<h4 class="modal-title"></h4>
+						<h4 class="modal-title">Choose your player</h4>
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
 					</div>
 
 					<!-- Modal body -->
-					<div class="modal-body">
-						<div class="login100-form-avatar">
-						<img src="images/kingIcon.jpg" class ="profilepic" alt="AVATAR" type="button" data-toggle="modal" data-target="#myModal" data-num="1">
-						</div>
-						<div class="login100-form-avatar">
-						<img src="images/queenIcon.jpg" class ="profilepic" alt="AVATAR" type="button" data-toggle="modal" data-target="#myModal" data-num="2">
-						</div>
-						<div class="login100-form-avatar">
-						<img src="images/jesterIcon.jpg" class ="profilepic" alt="AVATAR" type="button" data-toggle="modal" data-target="#myModal" data-num="3">
-						</div>
-
-
-						<div class="container-login100-form-btn p-t-10">
-							{{!-- <button href="/classes" class="login100-form-btn" id="playerNameSubmit">
-								Submit
-							</button> --}}
-							<a href="/auth/google">Login</a>
-
-						</div>
-						<div class="login100-form-avatar">
-						<img src="images/priestIcon.jpg" class ="profilepic" alt="AVATAR" type="button" data-toggle="modal" data-target="#myModal" data-num="5">
-						</div>
-						<div class="login100-form-avatar">
-						<img src="images/wizardIcon.jpg" class ="profilepic" alt="AVATAR" type="button" data-toggle="modal" data-target="#myModal" data-num="6">
-						</div>
+						<div class="modal-body">
+							<div class="row">
+								<div class="col-xl">
+								<img src="images/kingIcon.jpg" class ="profilepic" alt="AVATAR" type="button" data-toggle="modal" data-target="#myModal" data-num="1">
+								<p><b>The King</b></p>
+								</div>
+								<div class="col-xl">
+								<img src="images/queenIcon.jpg" class ="profilepic" alt="AVATAR" type="button" data-toggle="modal" data-target="#myModal" data-num="2">
+								<p><b>The Queen</b></p>
+								</div>
+							</div>	
+							<div class="row">
+								<div class="col-xl">
+								<img src="images/jesterIcon.jpg" class ="profilepic" alt="AVATAR" type="button" data-toggle="modal" data-target="#myModal" data-num="3">
+								<p><b>The Jester</b></p>
+								</div>
+								<div class="col-lg">
+								<img src="images/knightIcon.jpg" class ="profilepic" alt="AVATAR" type="button" data-toggle="modal" data-target="#myModal" data-num="4">
+								<p><b>The Knight</b></p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg">
+								<img src="images/priestIcon.jpg" class ="profilepic" alt="AVATAR" type="button" data-toggle="modal" data-target="#myModal" data-num="5">
+								<p><b>The Priest</b></p>
+								</div>
+								<div class="col-lg">
+								<img src="images/wizardIcon.jpg" class ="profilepic" alt="AVATAR" type="button" data-toggle="modal" data-target="#myModal" data-num="6">
+								<p><b>The Wizard</b></p>
+								</div>
+							</div>
 					</div>
 
 					<!-- Modal footer -->
@@ -76,9 +82,9 @@
 					</div>
 
 					<div class="container-login100-form-btn p-t-10">
-						<button href="/classes" class="login100-form-btn" id="playerNameSubmit">
-							Submit
-						</button>
+						<a href="/auth/google" class="login100-form-btn" id="playerNameSubmit">
+                            Submit
+                        </a>
 					</div>
 
 					<div class="text-center w-full">
