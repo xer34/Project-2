@@ -47,7 +47,11 @@ passport.use(
       //         done(null, newUser);
       //       });
       //   }
-      });
+      })
+                  .then(newUser => {
+            //   console.log("new user created: " + newUser);
+              done(null, newUser);
+            });
     }
   )
 );
