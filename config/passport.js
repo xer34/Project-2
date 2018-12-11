@@ -3,8 +3,9 @@ const GoogleStrategy = require("passport-google-oauth").OAuth2Strategy;
 const keys = require("./keys");
 const db = require("../models");
 
-passport.serializeUser((Player, done) => {
-  done(null, Player.googleId);
+passport.serializeUser((googleId, done) => {
+  // done(null, Player.googleId);\
+  db.Player.findOne(googleId).then(user => done(null, Player));
 });
 
 passport.deserializeUser((googleId, done) => {
