@@ -17,7 +17,7 @@ passport.use(
       // options for google strategy
       clientID: keys.google.clientID,
       clientSecret: keys.google.clientSecret,
-      callbackURL: "http://quiet-castle-43092.herokuapp.com/auth/google/redirect"
+      callbackURL: "/auth/google/redirect"
     },
     function(token, tokenSecret, profile, done) {
       //   db.Player.findOrCreate({
