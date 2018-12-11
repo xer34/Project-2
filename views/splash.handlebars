@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Quests Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/public/styles/splashStyles.css">
+    <link rel="stylesheet" type="text/css" href="loading-bar.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="content">
+                        <h1 class="effect-shine">Day Challenge RPG</h1>
+                        <h3><span class="txt-rotate" data period="2000" data-rotate='["Conquer new fitness goals", "Educate yourself in a fun way", "Beat new coding challenges", "Get your financials in check"]'></span></h3>
+                        <hr>
+                    </div>
+                    <a href="/auth/google"><button class="btn" id="login">Login</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="loading-bar.js"></script>
+
+    <script>
+        var TxtRotate = function (el, toRotate, period) {
+                this.toRotate = toRotate;
+                this.el = el;
+                this.loopNum = 0;
+                this.period = parseInt(period, 5) || 1000;
+                this.txt = '';
+                this.tick();
+                this.isDeleting = false;
+            };
+
+            TxtRotate.prototype.tick = function () {
+                var i = this.loopNum % this.toRotate.length;
+                var fullTxt = this.toRotate[i];
+
+                if (this.isDeleting) {
+                    this.txt = fullTxt.substring(0, this.txt.length - 1);
+                } else {
+                    this.txt = fullTxt.substring(0, this.txt.length + 1);
+                }
+
+                this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+                var that = this;
+                var delta = 110 - Math.random() * 100;
+
+                if (this.isDeleting) { delta /= 2; }
+
+                if (!this.isDeleting && this.txt === fullTxt) {
+                    delta = this.period;
+                    this.isDeleting = true;
+                } else if (this.isDeleting && this.txt === '') {
+                    this.isDeleting = false;
+                    this.loopNum++;
+                    delta = 500;
+                }
+
+                setTimeout(function () {
+                    that.tick();
+                }, delta);
+            };
+
+            window.onload = function () {
+                var elements = document.getElementsByClassName('txt-rotate');
+                for (var i = 0; i < elements.length; i++) {
+                    var toRotate = elements[i].getAttribute('data-rotate');
+                    var period = elements[i].getAttribute('data-period');
+                    if (toRotate) {
+                        new TxtRotate(elements[i], JSON.parse(toRotate), period);
+                    }
+                }
+
+                var css = document.createElement("style");
+                css.type = "text/css";
+                css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+                document.body.appendChild(css);
+            };
+    </script>
+
+</body>
+
+</html>
