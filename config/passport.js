@@ -48,9 +48,9 @@ passport.use(
       //       });
       //   }
       })
-                  .then(newUser => {
+                  .then(Player => {
             //   console.log("new user created: " + newUser);
-              done(null, newUser);
+              done(null, Player);
             });
     }
   )
