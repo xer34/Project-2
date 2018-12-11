@@ -5,8 +5,8 @@ function insertPlayerClass(event) {
   var warrior = {
     class: "warrior"
   };
-  $.post("/api/warriors", warrior);
-  console.log(warrior);
+  $.post("/api/:id/warriors", warrior);
+  console.log("warrior selected");
 }
 //cleric
 $("#clericSelect").on("click", insertPlayerClassCleric);

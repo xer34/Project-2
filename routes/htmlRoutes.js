@@ -2,16 +2,20 @@ const db = require("../models");
 
 module.exports = function(app) {
   app.get("/", function(req, res) {
-    res.render("index");
-  });
-
-  app.get("/classes", function(req, res) {
-    res.render("classes");
+    res.render("splash");
   });
 
   app.get("/home/:id", function(req, res) {
     db.Player.findOne({ where: { googleId: req.params.id } }).then(function(googleId) {
       res.render("home", {
+        Player : googleId
+      });
+    });
+  });
+
+  app.get("/home/:id/classes", function(req, res) {
+    db.Player.findOne({ where: { googleId: req.params.id } }).then(function(googleId) {
+      res.render("classes", {
         Player : googleId
       });
     });

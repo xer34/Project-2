@@ -12,16 +12,7 @@ router.get(
 
 router.get('/google/redirect', passport.authenticate('google'), (req, res) => {
   res.redirect('/home/' + req.user.googleId);
-  console.log(req.user.name)
-  console.log(req.user.id)
-
-    // res.redirect('/home');
-
 
 });
-
-
-
-
 
 module.exports = router;
