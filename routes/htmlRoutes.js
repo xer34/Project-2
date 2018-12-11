@@ -24,7 +24,7 @@ module.exports = function(app) {
   });
 
   app.get("/4", function(req, res) {
-    res.sendFile(path.join(__dirname,"../views/wizard4.html"));
+    res.sendFile(path.join(__dirname,"../views/wizard3.html"));
   });
 
 
